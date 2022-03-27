@@ -4,6 +4,7 @@ import moze_intel.projecte.PECore;
 import moze_intel.projecte.emc.arithmetics.IValueArithmetic;
 import moze_intel.projecte.emc.collector.DumpToFileCollector;
 import moze_intel.projecte.api.event.EMCRemapEvent;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.emc.collector.IExtendedMappingCollector;
 import moze_intel.projecte.emc.collector.IntToFractionCollector;
 import moze_intel.projecte.emc.generators.FractionToIntGenerator;
@@ -44,6 +45,8 @@ public final class EMCMapper
 {
 	public static Map<SimpleStack, Integer> emc = new LinkedHashMap<>();
 	public static Map<NormalizedSimpleStack, Integer> graphMapperValues;
+
+  public static double covalenceLoss = ProjectEConfig.covalenceLoss;
 
 	public static void map()
 	{

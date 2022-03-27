@@ -109,7 +109,7 @@ public class ToolTipEvent
 				int value = EMCHelper.getEmcValue(current);
 
 				event.toolTip.add(EnumChatFormatting.YELLOW +
-						StatCollector.translateToLocal("pe.emc.emc_tooltip_prefix") + " " + EnumChatFormatting.WHITE + String.format("%,d", value));
+						StatCollector.translateToLocal("pe.emc.emc_tooltip_prefix") + " " + EnumChatFormatting.WHITE + String.format("%,d", value) + EnumChatFormatting.BLUE + EMCHelper.getEmcSellString(current, 1));
 
 				if (current.stackSize > 1)
 				{
@@ -126,7 +126,7 @@ public class ToolTipEvent
 					}
 					else
 					{
-						event.toolTip.add(EnumChatFormatting.YELLOW + StatCollector.translateToLocal("pe.emc.stackemc_tooltip_prefix") + " " + EnumChatFormatting.WHITE + String.format("%,d", value * current.stackSize));
+						event.toolTip.add(EnumChatFormatting.YELLOW + StatCollector.translateToLocal("pe.emc.stackemc_tooltip_prefix") + " " + EnumChatFormatting.WHITE + String.format("%,d", value * current.stackSize) + EnumChatFormatting.BLUE + EMCHelper.getEmcSellString(current, current.stackSize));
 					}
 
 				}

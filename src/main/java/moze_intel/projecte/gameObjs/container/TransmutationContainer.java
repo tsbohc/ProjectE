@@ -107,7 +107,7 @@ public class TransmutationContainer extends Container
 		}
 		else if (slotIndex >= 26) //Unlearn Slot and Player Inventory
 		{
-			int emc = EMCHelper.getEmcValue(stack);
+			int emc = EMCHelper.getEmcSellValue(stack);
 			
 			if (emc == 0 && stack.getItem() != ObjHandler.tome)
 			{
